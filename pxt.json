@@ -5,7 +5,7 @@
         "core": "*",
         "bluetooth": "*",
         "pxt-scratch-more": "github:yokobond/pxt-scratch-more#v0.3.2",
-        "maqueen": "github:dfrobot/pxt-maqueen#2873abfa0e6ef1ac903b9f493453b78606445b63",
+        "maqueen": "github:dfrobot/pxt-maqueen#v1.7.2",
         "microphone": "*"
     },
     "files": [

@@ -19,16 +19,16 @@ basic.showString("scratch2maqueen ")
 pins.analogWritePin(AnalogPin.P0, 0)
 basic.forever(function () {
     if (ScratchMore.getSlot(Slot.SLOT0) >= 0) {
-        maqueen.MotorRun(maqueen.aMotors.M1, maqueen.Dir.CW, ScratchMore.getSlot(Slot.SLOT0))
+        maqueen.motorRun(maqueen.aMotors.M1, maqueen.Dir.CW, ScratchMore.getSlot(Slot.SLOT0))
     } else {
-        maqueen.MotorRun(maqueen.aMotors.M1, maqueen.Dir.CCW, -1 * ScratchMore.getSlot(Slot.SLOT0))
+        maqueen.motorRun(maqueen.aMotors.M1, maqueen.Dir.CCW, -1 * ScratchMore.getSlot(Slot.SLOT0))
     }
     if (ScratchMore.getSlot(Slot.SLOT1) >= 0) {
-        maqueen.MotorRun(maqueen.aMotors.M2, maqueen.Dir.CW, ScratchMore.getSlot(Slot.SLOT1))
+        maqueen.motorRun(maqueen.aMotors.M2, maqueen.Dir.CW, ScratchMore.getSlot(Slot.SLOT1))
     } else {
-        maqueen.MotorRun(maqueen.aMotors.M2, maqueen.Dir.CCW, -1 * ScratchMore.getSlot(Slot.SLOT1))
+        maqueen.motorRun(maqueen.aMotors.M2, maqueen.Dir.CCW, -1 * ScratchMore.getSlot(Slot.SLOT1))
     }
-    ScratchMore.setSlot(Slot.SLOT2, maqueen.sensor(PingUnit.Centimeters))
+    ScratchMore.setSlot(Slot.SLOT2, maqueen.Ultrasonic(PingUnit.Centimeters))
     slot3Value = ScratchMore.getSlot(Slot.SLOT3)
     splitToBools(slot3Value)
     if (ledLeft == 1) {
